@@ -1,0 +1,7 @@
+{
+  "name": "Propel AI - Real Estate Agent",
+  "description": "An AI receptionist that captures leads, syncs to CRM, and engages via WhatsApp.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
