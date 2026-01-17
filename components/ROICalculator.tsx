@@ -45,7 +45,7 @@ export const ROICalculator: React.FC = () => {
 
     setIsSubmitting(true);
 
-    const webhookUrl = "https://services.leadconnectorhq.com/hooks/wjGZr2Df1jUHO7Alna3I/webhook-trigger/cd404e98-41ae-4226-9a8c-a5be02ccc5a6";
+    const webhookUrl = process.env.WEBHOOK_URL;
     
     // Format phone number: Remove spaces/non-digits, remove leading zero, prepend country code
     let formattedPhone = '';
@@ -72,13 +72,15 @@ export const ROICalculator: React.FC = () => {
     };
 
     try {
-        await fetch(webhookUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(payload)
-        });
+        if (webhookUrl) {
+            await fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload)
+            });
+        }
     } catch (error) {
         console.error('Error submitting form:', error);
     } finally {

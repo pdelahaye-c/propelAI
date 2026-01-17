@@ -9,13 +9,9 @@ import { Footer } from './components/Footer';
 import { ROICalculator } from './components/ROICalculator';
 import { Login } from './components/Login';
 import { Dashboard } from './components/Dashboard';
+import { User } from './types';
 
-// Types
 type ViewState = 'landing' | 'login' | 'dashboard';
-interface User {
-  email: string;
-  name: string;
-}
 
 function App() {
   const [view, setView] = useState<ViewState>('landing');
@@ -95,7 +91,6 @@ function App() {
 
       {/* Floating Support Agent */}
       <div className="fixed bottom-6 right-6 z-50">
-         {/* @ts-ignore */}
          <elevenlabs-convai agent-id="agent_3901kevyj2v6ewcs584117f0gyex"></elevenlabs-convai>
       </div>
 

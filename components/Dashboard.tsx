@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { User } from '../types';
 
 // Mock Data for the Dashboard
 const stats = [
@@ -16,7 +17,7 @@ const recentCalls = [
 ];
 
 interface DashboardProps {
-  user: any;
+  user: User;
   onLogout: () => void;
 }
 
