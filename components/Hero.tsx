@@ -55,7 +55,7 @@ export const Hero: React.FC = () => {
                 </div>
                 <div>
                    <p className="text-xs text-gray-400">Lead Qualified</p>
-                   <p className="text-sm font-semibold text-white">Budget > $1.2M</p>
+                   <p className="text-sm font-semibold text-white">Budget &gt; $1.2M</p>
                 </div>
              </div>
           </div>
