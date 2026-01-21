@@ -89,10 +89,6 @@ function App() {
 
       <Footer />
 
-      {/* Floating Support Agent */}
-      <div className="fixed bottom-6 right-6 z-50">
-         <elevenlabs-convai agent-id="agent_3901kevyj2v6ewcs584117f0gyex"></elevenlabs-convai>
-      </div>
 
       {/* Login Modal Overlay */}
       {view === 'login' && (
